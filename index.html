@@ -50,7 +50,7 @@
             min-height: 60vh;
             text-align: center;
             color: black;
-            padding: 2em;
+            padding: 3em 0;
         }
 
         .header.with-image-bg .content {
@@ -85,27 +85,42 @@
             margin-bottom: 2em;
         }
 
+        /* Media query for mobile */
         @media (max-width: 768px) {
             body {
-                font-size: 18px; /* Slightly smaller text for mobile */
+                font-size: 18px;
             }
 
             .header.with-image-bg {
-                padding: 1.5em 1em; /* Reduced padding between header and SVG on mobile */
-                min-height: 50vh; /* Adjust header height */
+                padding: 1.5em 0; /* Reduced padding to minimize space above and below the SVG */
+                min-height: 45vh; /* Adjusted height */
             }
 
             .header.with-image-bg h1 {
-                font-size: 2em; /* Adjust header size */
+                font-size: 2em;
+                margin-top: 0;
             }
 
             .footer {
-                padding: 2em 1em; /* Adjust footer padding */
+                padding: 2em 1em;
             }
 
             .content {
                 padding-left: 10px;
                 padding-right: 10px;
+            }
+        }
+
+        /* More aggressive media query for very small screens */
+        @media (max-width: 480px) {
+            .header.with-image-bg {
+                padding: 1em 0; /* Further reduce padding on very small screens */
+                min-height: 40vh;
+            }
+
+            .header.with-image-bg h1 {
+                font-size: 1.8em;
+                margin-top: 0;
             }
         }
     </style>
