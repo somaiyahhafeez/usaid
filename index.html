@@ -80,11 +80,34 @@
         .text-chart-container iframe {
             width: 100%;
             max-width: 100%;
-            height: 580px;
+            height: 536px;
             border: none;
             margin-bottom: 2em;
         }
 
+        @media (max-width: 768px) {
+            body {
+                font-size: 18px; /* Slightly smaller text for mobile */
+            }
+
+            .header.with-image-bg {
+                padding: 1.5em 1em; /* Reduced padding between header and SVG on mobile */
+                min-height: 50vh; /* Adjust header height */
+            }
+
+            .header.with-image-bg h1 {
+                font-size: 2em; /* Adjust header size */
+            }
+
+            .footer {
+                padding: 2em 1em; /* Adjust footer padding */
+            }
+
+            .content {
+                padding-left: 10px;
+                padding-right: 10px;
+            }
+        }
     </style>
 
 </head>
