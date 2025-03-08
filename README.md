@@ -10,30 +10,30 @@ With USAID facing aid cuts and employee lay offs, my aim was to look at how the 
    - The analysis highlights which countries have consistently been the largest recipients of USAID over the years, shedding light on U.S. foreign aid priorities.
   
 - **Ukraine’s Aid Trends**: 
-   - An in-depth look at Ukraine’s aid distribution demonstrates how the country's foreign assistance has fluctuated, especially following major geopolitical events such as Russian invasion of Ukraine.
+   - I looked at the aid to Ukraine as it saw a huge surge in aid after Russian invasion. 
 
 
 ## 💾 Data Collection Process
 
 The raw data was sourced from [ForeignAssistance.gov](https://www.foreignassistance.gov/), which provides detailed records of U.S. foreign assistance. CSV files (e.g., `results.csv`, `results(1).csv`) were downloaded and processed for this analysis.
 
-The data was cleaned and prepared for analysis using Python, leveraging the `pandas` library to filter, group, and aggregate key information.
+The data was cleaned and prepared for analysis using Python, specifically using Pandas.
 
 ## 🧑‍💻 Data Analysis Process
 
 The analysis is detailed in the `USAID.ipynb` Jupyter notebook. Here’s a summary of the steps taken:
 
 1. **Data Import & Cleaning**: 
-   - The raw CSV data was imported and 
+   - The raw CSV data was imported and concatenated.
   
 2. **Top 10 Countries Analysis**: 
-   - The countries receiving the highest amounts of aid were identified and visualized, providing insights into the global priorities of USAID.
+   - The countries receiving the highest amounts of aid were identified.
   
 3. **Ukraine Aid Trend Analysis**: 
-   - A specific focus on Ukraine’s yearly aid was explored to visualize how the U.S. has adjusted its assistance over time.
+   - A specific focus on Ukraine’s yearly aid.
   
 4. **Data Visualization**: 
-   - Several visualizations (using `matplotlib` and `seaborn`) were created to highlight trends in aid distribution and to make the findings more accessible.
+   - Using Datawrapper.
 
 ## 🧠 Skills & Approaches
 
@@ -43,43 +43,28 @@ In this project, I utilized the following skills:
    - Cleaned and prepared large datasets using the `pandas` library for analysis.
   
 - **Data Visualization**: 
-   - Created meaningful visualizations using `matplotlib` and `seaborn` to tell a story with the data.
+   - Created meaningful visualizations.
   
 - **Time-Series Analysis**: 
-   - Analyzed trends in USAID’s funding, particularly focusing on year-by-year changes in aid distribution.
-  
-- **Jupyter Notebooks**: 
-   - Documented the entire process in an interactive, shareable format to make the analysis reproducible.
+   - For countries facing war, conflict.
 
-This project helped me strengthen my skills in handling large datasets, cleaning messy data, and visualizing complex patterns effectively.
+This project helped me strengthen my skills in handling large datasets.
 
 ## 🚀 Future Improvements
 
 Here are some aspects I wanted to explore further, but due to time constraints, were not included in this analysis:
-
-- **Expansion to More Countries**: 
-   - Analyzing additional countries or regions to provide a more comprehensive overview of U.S. foreign assistance globally.
   
 - **Specific Program Analysis**: 
    - Investigating which specific programs or projects were funded by USAID, and how those projects have evolved.
   
-- **Advanced Predictive Modeling**: 
-   - Utilizing machine learning to predict future aid trends based on historical data.
 
 ## 📥 Data Used for Analysis
 
-The data used for this analysis was sourced from [ForeignAssistance.gov](https://www.foreignassistance.gov/). Due to the size of the dataset (over 100MB), the raw CSV files are excluded from the repository but are still referenced for clarity.
+The data used for this analysis was sourced from [ForeignAssistance.gov](https://www.foreignassistance.gov/). 
 
-The `.gitignore` file ensures that large files like raw CSVs are not tracked by version control.
 
 ## 📖 Notebooks
 
-The analysis is conducted in the `USAID.ipynb` Jupyter notebook, where you can find detailed explanations of each step, from data import to final visualizations. Throughout the notebook, I’ve included commentary and questions to clarify the decisions and processes involved.
+The analysis is conducted in the `USAID.ipynb` Jupyter notebook.
 
-## 🛑 .gitignore
 
-A `.gitignore` file is included in the repository to prevent large or unnecessary files (like raw data) from being committed to the GitHub repository.
-
----
-
-Feel free to explore the project and explore how the USAID data changes over time!
