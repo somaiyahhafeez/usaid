@@ -56,6 +56,7 @@ Here are some aspects I wanted to explore further, but due to time constraints, 
   
 - **Specific Program Analysis**: 
    - Investigating which specific programs or projects were funded by USAID, and how those projects have evolved.
+   - Using ai2html and making graphs on R.
   
 
 ## 📥 Data Used for Analysis
