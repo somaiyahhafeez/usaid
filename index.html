@@ -5,78 +5,60 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>USAID's uncertain future risks global aid to various countries, especially its largest beneficiary, Ukraine</title>
 
-    <!-- Google fonts -->
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+    <!-- Adobe Fonts (using placeholder kit ID) -->
+    <link rel="stylesheet" href="https://use.typekit.net/your-kit-id.css">
 
     <style>
         body {
             margin: 0;
-            font-size: 20px;
-            font-family: 'Avenir', sans-serif;
-            text-rendering: optimizeLegibility;
+            font-size: 18px;
+            font-family: 'Roboto', sans-serif;
+            background-color: #f5f5f5;
+            color: #333;
+            line-height: 1.8;
         }
 
         .content {
-            max-width: 640px; 
+            max-width: 900px;
             margin: auto;
-            padding: 0 10px;  
+            padding: 2em 1.5em;
         }
 
-        .header {
-            padding: 3em 0;
-            text-align: center;
+        h1, h2 {
+            color: #222;
         }
 
         a {
-            color: #f05349;
+            color: #000000;
         }
 
-        .footer {
-            background: #f4f4f4;
-            text-align: center;
-            font-size: 0.8em;
-            margin-top: 4em;
-            padding: 4em 0;
+        .header {
+            padding: 2em 0;
         }
 
-        .with-image-bg {
-            position: relative;
+        .banner {
+            background: url('https://www.reuters.com/resizer/v2/L5MU5V6HSJN2PDSZ3KYEWELZCQ.jpg?auth=cb4f4bccc638c09ce423a234e980fda65e2d609c8a5b93a9cec18869cec2bab0&width=1080&quality=80') no-repeat center center;
             background-size: cover;
-            margin-bottom: 2em;
-            min-height: 70svh;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            color: #333333;
-        }
-
-        .with-image-bg {
-            background-image: url('https://www.reuters.com/resizer/v2/L5MU5V6HSJN2PDSZ3KYEWELZCQ.jpg?auth=cb4f4bccc638c09ce423a234e980fda65e2d609c8a5b93a9cec18869cec2bab0&width=1080&quality=80');
-        }
-
-        .header.with-image-bg .content {
+            height: 400px;
             width: 100%;
-            max-width: 80%;
-            position: relative;
-            z-index: 2;
         }
 
-        .header.with-image-bg h1 {
-            font-size: 2.5em;
-            line-height: 1.2;
-            max-width: 80%;
-            margin: 0 auto;
-        }
-
-        .text-chart-container {
-            display: block;
-            margin-bottom: 2em;
-        }
-
-        .text-chart-container p {
+        .byline {
+            font-size: 1.2em;
+            color: #000000;
             margin-bottom: 1em;
+        }
+
+        .header h1 {
+            font-size: 3.5em;
+            font-weight: bold;
+            line-height: 1.2;
+            margin-bottom: 0.3em;
+        }
+
+        .subhead {
+            font-size: 1.1em;
+            color: #666;
         }
 
         .iframe-container {
@@ -91,58 +73,89 @@
             border: none;
         }
 
-        /* Media query for mobile */
+        figure {
+            margin: 0;
+            padding-bottom: 1.2em;
+            width: 100%;
+            max-width: 100%;
+            display: block;
+        }
+
+        figure img {
+            width: 100%;
+            height: auto;
+            max-width: 100%;
+            display: block;
+        }
+
+        figcaption {
+            font-size: 0.8em;
+            text-align: center;
+            margin-top: 0.5em;
+            color: #666;
+            width: 100%;
+        }
+
+        blockquote {
+            border-left: 4px solid #18a1cd;
+            padding-left: 1em;
+            margin-left: 0;
+            font-style: italic;
+        }
+
+        .footer {
+            text-align: center;
+            padding: 2em 0;
+            background: #222;
+            color: #fff;
+            margin-top: 2em;
+        }
+
+        .footer a {
+            color: #f5f5f5;
+        }
+
         @media (max-width: 768px) {
             body {
-                font-size: 18px;
+                font-size: 16px;
             }
 
-            .header.with-image-bg {
-                padding: 1.5em 0; 
-                min-height: 45vh; 
+            .header h1 {
+                font-size: 2.5em;
             }
 
-            .header.with-image-bg h1 {
-                font-size: 2em;
-                margin-top: 0;
+            .banner {
+                height: 300px;
             }
 
-            .footer {
-                padding: 2em 1em;
-            }
-
-            .content {
-                padding-left: 10px;
-                padding-right: 10px;
+            figure {
+                margin: 1em 0;
             }
         }
 
         @media (max-width: 480px) {
-            .header.with-image-bg {
-                padding: 1em 0; 
-                min-height: 40vh;
+            .header h1 {
+                font-size: 2em;
             }
 
-            .header.with-image-bg h1 {
-                font-size: 1.8em;
-                margin-top: 0;
+            .banner {
+                height: 200px;
             }
         }
     </style>
 </head>
 
 <body>
-    <div class="header with-image-bg">
-        <div class="content">
-            <h1>USAID's uncertain future risks global aid to various countries, especially its largest beneficiary, Ukraine</h1>
-            <p class="subhead">President Trump's drastic cuts to USAID funding jeopardize global aid, sparking international controversy.</p>
-            <div class="byline">
-                <p>By <a href="https://somaiyahhafeez.github.io">Somaiyah Hafeez</a></p>
-            </div>
-        </div>
-    </div>
-
+    <div class="banner"></div>
     <div class="content">
+        <div class="header">
+            <h1>USAID's uncertain future risks global aid to various countries, especially its largest beneficiary, <span style="color: #18a1cd;">Ukraine</span></h1>
+            <p class="subhead">President Trump's drastic cuts to USAID funding jeopardize global aid, sparking international controversy.</p>
+        </div>
+        <div class="byline">
+            <p>By <a href="https://somaiyahhafeez.github.io">Somaiyah Hafeez</a></p>
+        </div>
+
         <p>Soon after resuming power, President Donald Trump's administration made many controversial and crucial decisions from abolishing <a href="https://www.theguardian.com/us-news/2025/jan/21/birthright-citizenship-explained-trump-executive-order">birthright citizenship</a> to mandating <a href="https://www.npr.org/2025/02/07/g-s1-46893/trump-anti-trans-rights-executive-action-gender-ideology-confusion">two genders</a> as the President signed a record <a href="https://www.federalregister.gov/presidential-documents/executive-orders/donald-trump/2025">26 executive orders</a> on his first day in office.</p>
 
         <p>One of the most far-reaching and disruptive changes came in the form of budget cuts, notably to the <a href="https://www.usaid.gov/">U.S Agency for International Aid (USAID)</a> which has faced significant reductions in funding as the administration announced it has terminated more than <a href="https://apnews.com/article/trump-usaid-foreign-aid-cuts-6292f48f8d4025bed0bf5c3e9d623c16">90%</a> of USAID's foreign assistance awards. The humanitarian aid agency has been a target of a government reorganization program led by Elon Musk, who is a close ally of Trump and heads the newly formed Department of Government Efficiency (DODGE).</p>
@@ -188,7 +201,7 @@
     <div class="footer">
         <div class="content">
             <p>You can find the code for this template <a href="https://github.com/somaiyahhafeez/usaid/">here</a>.
-            All analysis done on python, charts made on datawrapper. The data for Fiscal Year 2024 is partially reported. </p>
+            All analysis done on python, charts made on datawrapper. The data for Fiscal Year 2024 is partially reported.</p>
         </div>
     </div>
 </body>
