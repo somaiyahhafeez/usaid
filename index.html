@@ -1,70 +1,190 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Analysis of USAID funding cuts under the Trump administration and their impact on global aid programs, particularly Ukraine.">
     <title>USAID's uncertain future risks global aid to various countries, especially its largest beneficiary, Ukraine</title>
 
-    <!-- Adobe Fonts (using placeholder kit ID) -->
-    <link rel="stylesheet" href="https://use.typekit.net/your-kit-id.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    
+    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;600;700&display=swap" rel="stylesheet">
 
     <style>
+        :root {
+            --primary-color: #1a5a96;
+            --secondary-color: #e63946;
+            --text-color: #333;
+            --light-text: #666;
+            --background: #f8f9fa;
+            --light-background: #fff;
+            --dark-background: #222;
+            --border-color: #eee;
+            --content-max-width: 800px;
+            --content-padding: clamp(1rem, 5vw, 2rem);
+            --heading-line-height: 1.2;
+            --body-line-height: 1.8;
+            --transition-speed: 0.3s;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
         body {
             margin: 0;
+            font-family: 'Source Sans Pro', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
             font-size: 18px;
-            font-family: 'Roboto', sans-serif;
-            background-color: #f5f5f5;
-            color: #333;
-            line-height: 1.8;
+            background-color: var(--light-background);
+            color: var(--text-color);
+            line-height: var(--body-line-height);
         }
 
-        .content {
-            max-width: 800px;
-            margin: auto;
-            padding: 2em 1.5em;
-        }
-
-        h1, h2 {
-            color: #222;
+        img {
+            max-width: 100%;
+            height: auto;
+            display: block;
         }
 
         a {
-            color: #000000;
+            color: var(--primary-color);
+            text-decoration: none;
+            transition: color var(--transition-speed) ease;
         }
 
-        .header {
-            padding: 2em 0;
+        a:hover {
+            color: var(--secondary-color);
+            text-decoration: underline;
+        }
+
+        .sr-only {
+            position: absolute;
+            width: 1px;
+            height: 1px;
+            padding: 0;
+            margin: -1px;
+            overflow: hidden;
+            clip: rect(0, 0, 0, 0);
+            white-space: nowrap;
+            border-width: 0;
+        }
+
+        .container {
+            max-width: var(--content-max-width);
+            margin: 0 auto;
+            padding: 0 var(--content-padding);
+        }
+
+        .site-header {
+            background-color: var(--light-background);
+            border-bottom: 1px solid var(--border-color);
+            position: relative;
+            z-index: 10;
+        }
+
+        .site-header .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding-top: 1rem;
+            padding-bottom: 1rem;
+        }
+
+        .logo {
+            font-weight: 700;
+            font-size: 1.5rem;
+            color: var(--primary-color);
         }
 
         .banner {
+            position: relative;
             background: url('https://www.reuters.com/resizer/v2/L5MU5V6HSJN2PDSZ3KYEWELZCQ.jpg?auth=cb4f4bccc638c09ce423a234e980fda65e2d609c8a5b93a9cec18869cec2bab0&width=1080&quality=80') no-repeat center center;
             background-size: cover;
-            height: 400px;
+            height: 500px;
             width: 100%;
         }
 
+        .banner::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(0deg, rgba(0,0,0,0.6) 0%, rgba(0,0,0,0.3) 50%, rgba(0,0,0,0) 100%);
+        }
+
+        .banner-content {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            z-index: 1;
+            color: white;
+            padding: 2rem var(--content-padding);
+            max-width: var(--content-max-width);
+            margin: 0 auto;
+        }
+
+        .banner-content h1 {
+            font-size: clamp(2rem, 5vw, 3.5rem);
+            font-weight: 700;
+            line-height: var(--heading-line-height);
+            margin-bottom: 0.5rem;
+            text-shadow: 0 1px 3px rgba(0,0,0,0.5);
+        }
+
+        .banner-content .subhead {
+            font-size: clamp(1rem, 2.5vw, 1.25rem);
+            line-height: 1.4;
+            margin-bottom: 1rem;
+            text-shadow: 0 1px 2px rgba(0,0,0,0.5);
+            max-width: 90%;
+        }
+
+        .main-content {
+            background-color: var(--light-background);
+            padding: 0;
+            margin-bottom: 3rem;
+        }
+
+        .content {
+            padding: 2.5rem var(--content-padding);
+        }
+
         .byline {
-            font-size: 1.2em;
-            color: #000000;
-            margin-bottom: 1em;
+            font-size: 1rem;
+            color: var(--light-text);
+            margin-bottom: 2rem;
+            padding-bottom: 1rem;
+            border-bottom: 1px solid var(--border-color);
         }
 
-        .header h1 {
-            font-size: 3.5em;
-            font-weight: bold;
-            line-height: 1.2;
-            margin-bottom: 0.3em;
+        .byline a {
+            font-weight: 600;
         }
 
-        .subhead {
-            font-size: 1.1em;
-            color: #666;
+        .main-content h2 {
+            font-size: 1.75rem;
+            margin: 2rem 0 1rem;
+            color: var(--text-color);
         }
+
+        .main-content p {
+            margin-bottom: 1.5rem;
+        }
+
 
         .iframe-container {
             width: 100%;
             overflow: hidden;
-            margin-bottom: 2em;
         }
 
         .iframe-container iframe {
@@ -73,138 +193,184 @@
             border: none;
         }
 
-        figure {
-            margin: 0;
-            padding-bottom: 1.2em;
-            width: 100%;
-            max-width: 100%;
+        .visualization-caption {
+            font-size: 0.9rem;
+            color: var(--light-text);
+            padding: 1rem var(--content-padding);
+            border-top: 1px solid var(--border-color);
+            background-color: #f0f6fb;
+        }
+
+        .highlight-box {
+            background-color: #f0f6fb;
+            border-left: 4px solid var(--primary-color);
+            padding: 1.5rem;
+            margin: 2rem 0;
+        }
+
+        .highlight-box h3 {
+            color: var(--primary-color);
+            margin-top: 0;
+            margin-bottom: 0.75rem;
+        }
+
+
+
+        blockquote cite {
             display: block;
-        }
-
-        figure img {
-            width: 100%;
-            height: auto;
-            max-width: 100%;
-            display: block;
-        }
-
-        figcaption {
-            font-size: 0.8em;
-            text-align: center;
-            margin-top: 0.5em;
-            color: #666;
-            width: 100%;
-        }
-
-        blockquote {
-            border-left: 4px solid #18a1cd;
-            padding-left: 1em;
-            margin-left: 0;
-            font-style: italic;
+            margin-top: 0.75rem;
+            font-style: normal;
+            font-weight: 600;
+            font-size: 0.9rem;
         }
 
         .footer {
+            background: var(--dark-background);
+            color: white;
+            padding: 3rem 0;
             text-align: center;
-            padding: 2em 0;
-            background: #222;
-            color: #fff;
-            margin-top: 2em;
         }
 
         .footer a {
-            color: #f5f5f5;
+            color: #a8dadc;
         }
+
+        .footer p {
+            margin-bottom: 1rem;
+        }
+
+
 
         @media (max-width: 768px) {
             body {
                 font-size: 16px;
             }
 
-            .header h1 {
-                font-size: 2.5em;
-            }
-
             .banner {
-                height: 300px;
+                height: 350px;
             }
 
-            figure {
-                margin: 1em 0;
+            .main-content {
+                padding: 0;
+            }
+
+            .content {
+                padding: 1.5rem var(--content-padding);
+            }
+
+            .visualization-container {
+                margin: 2rem 0;
             }
         }
 
         @media (max-width: 480px) {
-            .header h1 {
-                font-size: 2em;
+            .banner {
+                height: 250px;
             }
 
-            .banner {
-                height: 200px;
+            .read-more-cards {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        @media (prefers-reduced-motion: reduce) {
+            html {
+                scroll-behavior: auto;
+            }
+
+            * {
+                transition: none !important;
+                animation: none !important;
             }
         }
     </style>
 </head>
 
 <body>
-    <div class="banner"></div>
-    <div class="content">
-        <div class="header">
-            <h1>USAID's uncertain future risks global aid to various countries, especially its largest beneficiary, Ukraine</h1>
-            <p class="subhead">President Trump's drastic cuts to USAID funding jeopardize global aid, sparking international controversy.</p>
-        </div>
-        <div class="byline">
-            <p>By <a href="https://somaiyahhafeez.github.io">Somaiyah Hafeez</a></p>
-        </div>
-
-        <p>In the months since returning to the White House, President Donald Trump has implemented a series of controversial policies through a record <a href="https://www.federalregister.gov/presidential-documents/executive-orders/donald-trump/2025">26 executive orders</a> signed on his first day in office, including the elimination of <a href="https://www.theguardian.com/us-news/2025/jan/21/birthright-citizenship-explained-trump-executive-order">birthright citizenship</a> and restrictions on <a href="https://www.npr.org/2025/02/07/g-s1-46893/trump-anti-trans-rights-executive-action-gender-ideology-confusion">gender identity recognition</a>.</p>
-        
-    <p>However, perhaps the most consequential decision for global humanitarian efforts has been the administration's dramatic reduction in foreign assistance funding, particularly targeting the <a href="https://www.usaid.gov/">U.S. Agency for International Development (USAID)</a>. According to recent reports, the administration has terminated more than <a href="https://apnews.com/article/trump-usaid-foreign-aid-cuts-6292f48f8d4025bed0bf5c3e9d623c16">90%</a> of USAID's foreign assistance awards as part of a government reorganization program led by Trump ally Elon Musk through the newly formed Department of Government Efficiency (DOGE).</p>
-
-    <p>The scope of these cuts became clear in early February when the administration announced plans to retain fewer than <a href="https://www.reuters.com/world/us/trump-administration-keeping-only-294-usaid-staff-out-over-10000-globally-2025-02-06/">300 staff</a> out of USAID's global workforce of more than 10,000 employees, effectively dismantling the agency's operational capacity.</p>
 
 
-        <div class="iframe-container">
-            <iframe title="USAID's Decade of Global Commitments" aria-label="Bar Chart" id="datawrapper-chart-ENeYv" src="https://datawrapper.dwcdn.net/ENeYv/5/" scrolling="no" frameborder="0" height="536" data-external="1"></iframe>
-        </div>
-        <script type="text/javascript">
-            !function(){"use strict";window.addEventListener("message",(function(a){if(void 0!==a.data["datawrapper-height"]){var e=document.querySelectorAll("iframe");for(var t in a.data["datawrapper-height"])for(var r=0;r<e.length;r++)if(e[r].contentWindow===a.source){var i=a.data["datawrapper-height"][t]+"px";e[r].style.height=i}}}))}();
-        </script>
-        <p>As the chart above illustrates, USAID's annual global commitments have significantly changed over the last two decades. The agency has been the cornerstone of American foreign assistance, managing 61% of the more than $71 billion in foreign aid allocated in 2023, according to <a href="https://www.foreignassistance.gov/">ForeignAssistance.gov</a>. These substantial commitments have funded critical programs addressing health crises, food insecurity, economic development, and humanitarian emergencies worldwide.</p>
-
-        <p>The path to dismantling USAID began in January when Secretary of State Marco Rubio <a href="https://www.nbcnews.com/politics/politics-news/marco-rubio-orders-halt-almost-us-foreign-aid-rcna189230">suspended U.S. foreign aid for 90 days</a> following a presidential executive order. By March, the administration completed its review, resulting in the termination of almost all <a href="https://www.npr.org/sections/goats-and-soda/2025/02/26/nx-s1-5310673/usaid-trump-administration-global-health">USAID programs</a> despite widespread diplomatic concerns.</p>
-
-        <div class="iframe-container">
-            <iframe title="After war and political upheaval, USAID surged in Ukraine—but not elsewhere" aria-label="Multiple Lines" id="datawrapper-chart-1wITM" src="https://datawrapper.dwcdn.net/1wITM/14/" scrolling="no" frameborder="0" height="488" data-external="1"></iframe>
-        </div>
-        <script type="text/javascript">
-            !function(){"use strict";window.addEventListener("message",(function(a){if(void 0!==a.data["datawrapper-height"]){var e=document.querySelectorAll("iframe");for(var t in a.data["datawrapper-height"])for(var r=0;r<e.length;r++)if(e[r].contentWindow===a.source){var i=a.data["datawrapper-height"][t]+"px";e[r].style.height=i}}}))}();
-        </script>
-
-        <p>Analysis of USAID funding patterns reveals a dramatic shift in priorities following Russia's 2022 invasion of Ukraine. As shown in the line chart above, while funding to most countries remained relatively stable or even declined over the past decade, Ukraine experienced an unprecedented surge, receiving more than $30 billion since the conflict began—a 96% increase compared to pre-war levels.</p>
-
-        <p>This stands in contrast to other conflict zones. Afghanistan, for example, saw its aid package drastically reduced following the U.S. withdrawal and Taliban takeover in 2021. </p>
-
-        <div class="iframe-container">
-            <iframe title="USAID's top recipients have shifted over the past decade, with Ukraine leading in 2024" 
-                    aria-label="Table" id="datawrapper-chart-Ymzdt" 
-                    src="https://datawrapper.dwcdn.net/Ymzdt/3/" 
-                    scrolling="no" frameborder="0" 
-                    height="582" data-external="1">
-            </iframe>
+    <main id="main-content">
+        <div class="banner" role="banner">
+            <div class="banner-content">
+                <h1>USAID's uncertain future risks global aid to various countries, especially its largest beneficiary, Ukraine</h1>
+                <p class="subhead">President Trump's sweeping cuts to USAID funding jeopardize billions in international assistance, with the agency's largest beneficiary facing the greatest impact.</p>
+            </div>
         </div>
 
-        <p>The detailed breakdown in the table above illustrates how dramatically USAID's geographic priorities have evolved. Ukraine now dominates the recipient list, having displaced traditional aid recipients like Jordan, Ethiopia, and South Sudan. Of particular note is the shift in funding categories: from 2022-2024, approximately $28 billion—over 90% of Ukraine's total aid package—was allocated to "governance" initiatives aimed at supporting institution building, democratic reforms, and macroeconomic stability in the conflict zone.</p>
+        <article class="main-content container">
+            <div class="content">
+                <div class="byline">
+                    <p>By <a href="https://somaiyahhafeez.github.io">Somaiyah Hafeez</a> | Published March 5, 2025</p>
+                </div>
 
-        <p>Experts warn that the abrupt termination of USAID programs could have cascading effects on global stability. Programs providing emergency relief, health services, food security, and education in conflict-affected regions face immediate peril. Initiatives combating infectious diseases, supporting refugee populations, and promoting sustainable development also hang in the balance.</p>
+                <p>In the months since returning to the White House, President Donald Trump has implemented a series of controversial policies through a record <a href="https://www.federalregister.gov/presidential-documents/executive-orders/donald-trump/2025">26 executive orders</a> signed on his first day in office, including the elimination of <a href="https://www.theguardian.com/us-news/2025/jan/21/birthright-citizenship-explained-trump-executive-order">birthright citizenship</a> and restrictions on <a href="https://www.npr.org/2025/02/07/g-s1-46893/trump-anti-trans-rights-executive-action-gender-ideology-confusion">gender identity recognition</a>.</p>
 
-        <p>The reduction in U.S. foreign assistance threatens these critical humanitarian programs, leaving millions without essential support and deepening global crises, ultimately undermining efforts to alleviate suffering in some of the world's most vulnerable regions.</p>
-    </div>
+                <p>However, perhaps the most consequential decision for global humanitarian efforts has been the administration's dramatic reduction in foreign assistance funding, particularly targeting the <a href="https://www.usaid.gov/">U.S. Agency for International Development (USAID)</a>. According to recent reports, the administration has terminated more than <a href="https://apnews.com/article/trump-usaid-foreign-aid-cuts-6292f48f8d4025bed0bf5c3e9d623c16">90%</a> of USAID's foreign assistance awards as part of a government reorganization program led by Trump ally Elon Musk through the newly formed Department of Government Efficiency (DOGE).</p>
+            
+                <div class="highlight-box">
+                    <h3>Key Development</h3>
+                    <p>The scope of USAID cuts became clear in early February when the administration announced plans to retain fewer than <a href="https://www.reuters.com/world/us/trump-administration-keeping-only-294-usaid-staff-out-over-10000-globally-2025-02-06/">300 staff</a> out of the agency's global workforce of more than 10,000 employees, effectively dismantling its operational capacity worldwide.</p>
+                </div>
 
-    <div class="footer">
-        <div class="content">
-            <p>You can find the code for this template <a href="https://github.com/somaiyahhafeez/usaid/">here</a>.
-            All analysis done on python, charts made on datawrapper. The data for Fiscal Year 2024 is partially reported.</p>
+                <h2>USAID's Global Impact Before the Cuts</h2>
+
+
+                        <div class="iframe-container">
+                            <iframe title="USAID's Decade of Global Commitments" aria-label="Bar Chart" id="datawrapper-chart-ENeYv" src="https://datawrapper.dwcdn.net/ENeYv/5/" scrolling="no" frameborder="0" height="536" data-external="1"></iframe>
+                        </div>
+
+                </div>
+                <script type="text/javascript">
+                    !function(){"use strict";window.addEventListener("message",(function(a){if(void 0!==a.data["datawrapper-height"]){var e=document.querySelectorAll("iframe");for(var t in a.data["datawrapper-height"])for(var r=0;r<e.length;r++)if(e[r].contentWindow===a.source){var i=a.data["datawrapper-height"][t]+"px";e[r].style.height=i}}}))}();
+                </script>
+
+                <p>As the chart above illustrates, USAID's annual global commitments have significantly changed over the last two decades. The agency has been the cornerstone of American foreign assistance, managing 61% of the more than $71 billion in foreign aid allocated in 2023, according to <a href="https://www.foreignassistance.gov/">ForeignAssistance.gov</a>. These substantial commitments have funded critical programs addressing health crises, food insecurity, economic development, and humanitarian emergencies worldwide.</p>
+
+                <p>The path to dismantling USAID began in January when Secretary of State Marco Rubio <a href="https://www.nbcnews.com/politics/politics-news/marco-rubio-orders-halt-almost-us-foreign-aid-rcna189230">suspended U.S. foreign aid for 90 days</a> following a presidential executive order. By March, the administration completed its review, resulting in the termination of almost all <a href="https://www.npr.org/sections/goats-and-soda/2025/02/26/nx-s1-5310673/usaid-trump-administration-global-health">USAID programs</a> despite widespread diplomatic concerns.</p>
+
+                <h2>Ukraine's Unique Position in USAID Funding</h2>
+
+
+                        <div class="iframe-container">
+                            <iframe title="After war and political upheaval, USAID surged in Ukraine—but not elsewhere" aria-label="Multiple Lines" id="datawrapper-chart-1wITM" src="https://datawrapper.dwcdn.net/1wITM/14/" scrolling="no" frameborder="0" height="488" data-external="1"></iframe>
+                        </div>
+                <script type="text/javascript">
+                    !function(){"use strict";window.addEventListener("message",(function(a){if(void 0!==a.data["datawrapper-height"]){var e=document.querySelectorAll("iframe");for(var t in a.data["datawrapper-height"])for(var r=0;r<e.length;r++)if(e[r].contentWindow===a.source){var i=a.data["datawrapper-height"][t]+"px";e[r].style.height=i}}}))}();
+                </script>
+
+                 <p>Analysis of USAID funding patterns reveals a dramatic shift in priorities following Russia's 2022 invasion of Ukraine. As shown in the line chart above, while funding to most countries remained relatively stable or even declined over the past decade, Ukraine experienced an unprecedented surge, receiving more than $30 billion since the conflict began—a 96% increase compared to pre-war levels.</p>
+
+                 <p>This stands in contrast to other conflict zones. Afghanistan, for example, saw its aid package drastically reduced following the U.S. withdrawal and Taliban takeover in 2021. </p>
+                <h2>Shifting Priorities and Recipients</h2>
+
+
+                        <div class="iframe-container">
+                            <iframe title="USAID's top recipients have shifted over the past decade, with Ukraine leading in 2024" 
+                                    aria-label="Table" id="datawrapper-chart-Ymzdt" 
+                                    src="https://datawrapper.dwcdn.net/Ymzdt/3/" 
+                                    scrolling="no" frameborder="0" 
+                                    height="582" data-external="1">
+                            </iframe>
+                        </div>
+                </div>
+
+                <p>The detailed breakdown in the table above illustrates how dramatically USAID's geographic priorities have evolved. Ukraine now dominates the recipient list, having displaced traditional aid recipients like Jordan, Ethiopia, and South Sudan. Of particular note is the shift in funding categories: from 2022-2024, approximately $28 billion—over 90% of Ukraine's total aid package—was allocated to "governance" initiatives aimed at supporting institution building, democratic reforms, and macroeconomic stability in the conflict zone.</p>
+
+                <p>Experts warn that the abrupt termination of USAID programs could have cascading effects on global stability. Programs providing emergency relief, health services, food security, and education in conflict-affected regions face immediate peril. Initiatives combating infectious diseases, supporting refugee populations, and promoting sustainable development also hang in the balance.</p>
+
+                <p>The reduction in U.S. foreign assistance threatens these critical humanitarian programs, leaving millions without essential support and deepening global crises, ultimately undermining efforts to alleviate suffering in some of the world's most vulnerable regions.</p>
+  
+                
+            </div>
+        </article>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <p>You can find the code for this story <a href="https://github.com/somaiyahhafeez/usaid/">here</a>.</p>
+            <p>All analysis done on Python, charts made on Datawrapper. The data for Fiscal Year 2024 is partially reported.</p>
         </div>
-    </div>
+    </footer>
+
 </body>
 </html>
